@@ -43,14 +43,18 @@ const Profile = () => {
   }, []);
   return (
     <>
-      <div className="flex flex-col w-full h-screen text-7xl text-violet-500 font-bold justify-center items-center">
-        Profile Page {userDetail?.firstName}
-        <button
-          className="text-lg bg-slate-300 p-5 rounded-md"
-          onClick={handleLogout}
-        >
-          Logout
-        </button>
+      <div className="flex flex-col w-full h-screen text-7xl text-violet-500 font-bold justify-center items-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 animate-gradient">
+        <div className="bg-white bg-opacity-60 p-10 rounded-lg shadow-lg text-center backdrop-blur-md">
+          <h1 className="mb-5 animate-fade-in">
+            Welcome To The Profile Page, {userDetail?.firstName}!
+          </h1>
+          <button
+            className="text-lg bg-slate-300 p-5 rounded-md hover:bg-slate-400 transition-all duration-300 ease-in-out"
+            onClick={handleLogout}
+          >
+            Logout
+          </button>
+        </div>
       </div>
     </>
   );
